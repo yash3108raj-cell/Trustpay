@@ -37,7 +37,7 @@ body{
   margin:20px 0;
 }
 .logo img{
-  height:50px;
+  height:98px;
 }
 
 /* Text */
@@ -392,7 +392,7 @@ body {
 }
 
 .logo img {
-  width: 70px;
+  width: 160px;
   filter: drop-shadow(0 6px 12px rgba(0,0,0,.6));
 }
 
@@ -606,6 +606,7 @@ h1 {
 }
 
 
+
 * {
   margin: 0;
   padding: 0;
@@ -663,6 +664,31 @@ h1, h2, h3 {
 
 
  
+=======
+.pe-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    180deg,
+    #e8ffff 0%,
+    #7fffd4 45%,
+    #00e6c3 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.4),
+    0 4px 10px rgba(0,255,200,0.35),
+    0 10px 25px rgba(0,0,0,0.45);
+
+  text-align: center;
+}
+
+>>>>>>> 531890b31b6375d7f869d6f07a6f23e28c14eb1c
 
 body{
   min-height:100vh;
@@ -912,4 +938,3 @@ h1{
     drop-shadow(0 10px 22px rgba(255,255,255,0.25))
     drop-shadow(0 3px 8px rgba(0,0,0,0.75));
 }
-

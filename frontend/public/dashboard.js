@@ -763,4 +763,8 @@ function copyUSDT() {
   const address = document.getElementById("usdtAddress").innerText;
   navigator.clipboard.writeText(address);
   alert("Address copied!");
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 531890b31b6375d7f869d6f07a6f23e28c14eb1c

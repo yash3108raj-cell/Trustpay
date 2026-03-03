@@ -1,4 +1,8 @@
+
  function login() {
+
+function login() {
+
   fetch("/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -11,12 +15,19 @@
   .then(d => {
     if (d.ok) {
       localStorage.setItem("isLoggedIn", "true");
+
       localStorage.setItem("inviteCode", d.inviteCode);  // 🔥 IMPORTANT
       localStorage.setItem("userId", d.userId);
+
+
       window.location.href = "dashboard.html";
     } else {
       alert(d.msg);
     }
   })
   .catch(() => alert("Server error"));
+
 }
+
+}
+
