@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>BG Cash - Login</title>
+  <title>PE WALLET - Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
+
+  <div class="light-bg"></div>
+  
 
 <div class="login-container">
 
   <!-- Header -->
   <div class="top-bar">
     <span class="back">←</span>
-    <h2>PE WALLET</h2>
+    <h1 class=" pe-title" ></h2>
   </div>
-
+ 
   <!-- Logo -->
   <div class="logo">
    
@@ -76,36 +82,6 @@
 <script src="login.js"></script>
 
 <script>
-let cid="";
-fetch("/captcha")
-  .then(r=>r.json())
-  .then(d=>{
-    cid=d.id;
-    document.getElementById("q").innerText=d.q;
-  });
-
-function login(){
-  fetch("/login",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({
-      mobile: m.value,
-      password: p.value,
-      cid: cid,
-      ans: a.value
-    })
-  })
-  .then(r=>r.json())
-  .then(d=>{
-    if(d.ok){
-      localStorage.setItem("userPassword", p.value);
-      localStorage.setItem("isLoggedIn", "true"); 
-      window.location.href="dashboard.html";
-    }else{
-      alert(d.msg);
-    }
-  });
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
